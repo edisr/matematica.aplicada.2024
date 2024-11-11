@@ -97,9 +97,9 @@ def evaluate_rules(row):
     aggregated = np.fmax(np.fmax(op_activation_low, op_activation_med), op_activation_high)
     COA = centroid_defuzzification(x_op, aggregated)
     
-    if 0 <= COA < 2.5:
+    if 0 <= COA < 3.3:
         return "Negativo"
-    elif 2.5 <= COA < 5.5:
+    elif 3.3 <= COA < 6.7:
         return "Neutro"
     else:
         return "Positivo"
